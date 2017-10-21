@@ -1,4 +1,6 @@
 # the functions for Vectors
+from functools import partial, reduce
+
 def vector_add(v, w):
     return [v_i + w_i for v_i, w_i in zip(v, w)]
 
