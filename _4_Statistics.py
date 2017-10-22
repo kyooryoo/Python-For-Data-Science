@@ -83,3 +83,42 @@ def variance(x):
     deviations = de_mean(x)
     return sum_of_squares(deviations) / (n - 1)
 print("The variance of sample data is: " + str(variance(num_friends)))
+
+import math
+def standard_deviation(x):
+    return math.sqrt(variance(x))
+sd = standard_deviation(num_friends)
+print("The standard deviation of sample sata is: " + str(sd))
+
+def interquartile_range(x):
+    return quantile(x, 0.75) - quantile(x, 0.25)
+ir = interquartile_range(num_friends)
+print("The interquartile range of sample data is: " + str(ir))
+
+# covariance measures how two variables vary in tendem from their means
+from _3_LinearAlgebraFunctions import dot
+daily_minutes = [10,5,4,4,2]
+def covariance(x, y):
+    n = len(x)
+    return dot(de_mean(x), de_mean(y)) / (n - 1)
+result = covariance(num_friends, daily_minutes)
+print("The covariance of sample data is: " + str(result))
+
+# correlation is standardized covariance which is always between -1 and 1 
+# it could be impacted by outliers which should be removed in advance
+def correlation(x, y):
+    stdev_x = standard_deviation(x)
+    stdev_y = standard_deviation(y)
+    if stdev_x > 0 and stdev_y > 0:
+        return covariance(x, y) / stdev_x / stdev_y
+    else:
+        return 0
+result = correlation(num_friends, daily_minutes)
+print("The correlation of sample data is: " + str(result))
+
+# pay attention to Simpson's Paradox
+# for example, two groups of people compare their average age 
+# the mean of age values of group A may larger than group B
+# however, it is possible that the average age of both adults and chuldren
+# of group A are smaller than group B
+# just because group A has much more adults in percentage than group B
