@@ -103,3 +103,10 @@ plt.title("Axes aren't comparable")
 plt.xlabel("test 1 grade")
 plt.ylabel("test 2 grade")
 plt.show()
+
+# For further exploration
+# seaborn for enhance visualization at http://seaborn.pydata.org
+# D3.js for interactive visualization on web at https://d3js.org
+# Bokeh of python in D3.js style at https://bokeh.pydata.org/en/latest
+# the Python way of R lib ggplot2 at https://pypi.python.org/pypi/ggplot
+

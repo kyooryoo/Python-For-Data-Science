@@ -122,3 +122,12 @@ print("The correlation of sample data is: " + str(result))
 # however, it is possible that the average age of both adults and chuldren
 # of group A are smaller than group B
 # just because group A has much more adults in percentage than group B
+
+# For further exploration
+# statistical functions are available from SciPy, pandas, and StatsModels
+# SciPy at https://docs.scipy.org/doc/scipy/reference/states.html
+# pandas at http://pandas.pydata.org
+# StatsModels at http://statsmodels.org/stable/index.html
+# learn OpenIntro Statistics and OpenStax Introductory Statistics at
+# https://www.openintro.org/stat/textbook.php
+# and https://openstax.org/details/introductory-statistics

@@ -68,7 +68,11 @@ def is_diagonal(i, j):
     return 1 if i == j else 0
 
 indentity_matrix = make_matrix(5, 5, is_diagonal)
+print(indentity_matrix)
 
-# learning resources of Linear Algebra
-# https://www.math.ucdavis.edu/~linear/
-# http://joshua.smcvt.edu/linearalgebra
+# For further exploration
+# study Linear Algebra at https://www.math.ucdavis.edu/~linear/
+# or http://joshua.smcvt.edu/linearalgebra
+# or http://www.math.brown.edu/~treil/papers/LADW/LADW.html
+# use NumPy for scientific computing with Python at http://www.numpy.org
+

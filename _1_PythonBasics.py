@@ -209,3 +209,11 @@ def doubler_correct(f):
  return g
 g = doubler_correct(f2)
 print g(1,2) # (1+2)*2=6
+
+# For further exploration
+# official tutorial at https://docs.python.org/3/tutorial
+# IPython at http://ipython.org/ipython-doc/3/interactive/tutorial.html
+# and also http://ipython.org/documentation.html
+# and http://ipython.org/presentation.html
+# A good reference book of Python for Data Analysis by William McKinney
+
