@@ -1,3 +1,67 @@
+# following code is tested in Python3
+
+# some note for basic Python
+# variable names cannot start with number or special characters
+# strings could be double or single quotes
+# use print('my {one} output from {two}.'.format(one='first',two='Python'))
+# or save 'one' and 'two' print('my {} output from {}.'.format(second,Python))
+print('my {one} output from {two}.'.format(one='first',two='Python'))
+print('my {} output from {}.'.format('second','Python'))
+
+# list wrap elements with [] and can have mixed type of data and nested
+alist = ['hi',1,[2,[3,4]]]
+print("the original list: {}".format(alist))
+# list have default funcs such as append, pop and so on
+alist.append('a')
+print("the current list after appending 'a': {}".format(alist))
+# retrieve element in list with index, starting from 0
+print('the first element of the third element: {}'.format(alist[2][0]))
+# list elements could be modified directly
+alist[0] = 'hello'
+print('the current list after update: {}'.format(alist))
+
+# dictionary use {} to wrap elements which have keys and values
+adict = {'key1':'item1','key2':'item2'}
+print('a sample dictionary: {}'.format(adict))
+# refer to an element in dictionary with key
+print('the item2 in sample: {}'.format(adict['key2']))
+
+# tuples use () to wrap elements which cannot be modified
+atuple = (1,2,3,2,1)
+print('a sample tuple: {}'.format(atuple))
+print('the third element: {}'.format(atuple[2]))
+# atuple[2] = 'NEVER do this!' will cause error
+
+# sets use {} to wrap elements which are all unique
+aset = {1,2,3,2,1}
+print('a sample set: {}'.format(aset))
+
+# lambda returns a function which could be consumed easily
+aseq = [1,2,3,4,5]
+result = list(map(lambda var: var**2, aseq))
+print('squared seq of [1,2,3,4,5]: {}'.format(result))
+
+# some convenient system method
+astring = 'Hello, welcome to the world of Python!'
+print('the original string: {}'.format(astring))
+uppered = astring.upper()
+print('the string after upper: {}'.format(uppered))
+splited = astring.split(',')
+print('the string after split: {}'.format(splited))
+
+print('a sample dict: {}'.format(adict))
+print('the keys of a dict: {}'.format(adict.keys()))
+print('the items of a dict: {}'.format(adict.items()))
+
+print('a sample list: {}'.format(alist))
+print('the last element poped: {}'.format(alist.pop()))
+print('the list after poped: {}'.format(alist))
+# the in method only works on the first level of a list
+print('1 is in the list or not: {}'.format(1 in alist))
+print('2 is in the list or not: {}'.format(2 in alist))
+print("'a' is in the list or not: {}".format('a' in alist))
+
+
 # list comprehensions
 even_numbers = [x for x in range(5) if x % 2 == 0]
 print("a list of even numbers: {}".format(even_numbers))
@@ -6,7 +70,7 @@ print("square the numbers from 0 to 4: {}".format(squares))
 even_squares = [x * x for x in even_numbers]
 print("square the even numbers: {}".format(even_squares))
 square_dict = {x : x * x for x in range(5)}
-print("the squred number dictionary: {}".format(square_dict))
+print("the squared number dictionary: {}".format(square_dict))
 square_set = {x * x for x in range(-5, 5)}
 print("a set can only contain unique objects: {}".format(square_set))
 zeros = [ 0 for _ in even_numbers]
@@ -107,7 +171,7 @@ print("the newly defined new_two_to_the(3): {}".format(new_two_to_the(3)))
 # with specified argument name
 # second argument could be fulfilled in advance
 square_of = ft.partial(exp, power=2)
-print("also easily defined squre_of(3): {}".format(square_of(3)))
+print("also easily defined square_of(3): {}".format(square_of(3)))
 
 # there are different ways to achieve the same purpose
 def double(x):
