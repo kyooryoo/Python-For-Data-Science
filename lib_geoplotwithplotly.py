@@ -84,8 +84,12 @@ data = dict(type='choropleth',
             locationmode='USA-states',
             z=df['Voting-Age Population (VAP)'],
             text=df['State'],
+            colorscale='Viridis',
+            reversescale=True,
             colorbar={'title':''})
 layout = dict(title='Voting-Age Population',
-              geo={'scope':'usa',showlakes=True,lakecolor='rgb(85,173,240)'})
+              geo={'scope':'usa',
+                   'showlakes':True,
+                   'lakecolor':'rgb(85,173,240)'})
 choromap5 = go.Figure(data = [data],layout = layout)
 plot(choromap5)
