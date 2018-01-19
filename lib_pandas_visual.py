@@ -47,7 +47,7 @@ df3['a'].plot.hist(bins=20,alpha=0.5)
 
 df3[['a','b']].plot.box(color='red')
 
-df3['d'].plot.kde(color='red',line_style=':')
+df3['d'].plot.kde(color='red',ls=':')
 
 df3['d'].plot.kde(color='red',ls=':',lw=5)
 
