@@ -1,4 +1,5 @@
-from sklearn.model_selection import train_test_split, LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,7 +20,7 @@ sns.distplot(df['Price'])
 # check the full coorelation of all columns
 sns.heatmap(df.corr(),cmap='RdYlBu')
 
-# transfer columns to features list without last two features
+# transfer columns to features list without target and irrelevant features
 X1 = np.array(df.columns)
 col_length = len(X1)
 X1 = np.delete(X1,[col_length-2,col_length-1])
