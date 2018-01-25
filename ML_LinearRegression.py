@@ -1,3 +1,6 @@
+# in a pair of values, predict one value from another value
+# hopefully there is a linear relationship between the two values
+
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import pandas as pd

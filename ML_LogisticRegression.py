@@ -9,7 +9,7 @@
 # noice to the training data to get a less overfitting model, so that the model
 # has it predicted result with more variance but less bias from right results
 
-# logistic regression is a method for classification
+# logistic regression is a method for classification results between Y/N
 # Sigmoid function 1/(1+e^(-z)) is used for logistic regression model
 # the linear model of y=b0+b1*x could be used for replacing z in Sigmoid fun
 
