@@ -4,6 +4,10 @@ df = pd.read_csv(
         './Documents/Python-For-Data-Science/sample_KNN_Project_Data')
 df.head()
 
+# explore the data a little big
+import seaborn as sns
+sns.pairplot(df,hue='TARGET CLASS')
+
 # pre processing data to standardize values
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
